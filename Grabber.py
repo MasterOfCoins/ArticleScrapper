@@ -49,7 +49,9 @@ def extractor(webpage, structure=True, Title=True, Text=True, linelength=70):
 
 
 
-urls = ("http://www.lefigaro.fr/politique/2014/04/24/01002-20140424ARTFIG00355-plan-d-economies-le-ps-menace-de-sanctionner-les-deputes-frondeurs.php",)
+urls = ("http://www.lefigaro.fr/politique/2014/04/24/01002-20140424ARTFIG00355-plan-d-economies-le-ps-menace-de-sanctionner-les-deputes-frondeurs.php",
+	"http://www.bloomberg.com/news/2014-04-24/e-cigarettes-to-fall-under-fda-review-as-popularity-grows.html",
+	"http://www.reuters.com/article/2014/04/24/us-amazoncom-results-idUSBREA3N20J20140424")
 
 for url in urls:
 	http = connect.request("GET", url)
