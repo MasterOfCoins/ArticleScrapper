@@ -4,14 +4,9 @@ import textwrap
 
 connect = urllib3.PoolManager()
 
-def createdatafile(name="default"):
-	"Creates a txt data file using the default name"
-
 def extractor(webpage, structure=True, Title=True, Text=True, linelength=70):
 	try:
 		soup = BeautifulSoup(webpage)
-		with open("test.html","w+") as file:
-			file.write(soup.prettify().encode("utf-8"))
 
 		if Title:
 			print "_"*20+"\n"+"Here is the title :\n","_"*20+"\n"+(soup.title.string).encode("utf-8")
@@ -37,7 +32,6 @@ def extractor(webpage, structure=True, Title=True, Text=True, linelength=70):
 						max = reduced_structure[items]
 						most_important = str(reduced_structure[items-1])
 
-				# print "debug : "+most_important
 				for text in soup.find_all(["p","h1","h2","span"]):
 					# print "debug : "+most_important
 					# print "text : \n",text
